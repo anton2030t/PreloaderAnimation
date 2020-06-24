@@ -13,6 +13,7 @@
 		6C1A079924A35F9700712A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C1A079724A35F9700712A91 /* Main.storyboard */; };
 		6C1A079B24A35FA000712A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C1A079A24A35FA000712A91 /* Assets.xcassets */; };
 		6C1A079E24A35FA000712A91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C1A079C24A35FA000712A91 /* LaunchScreen.storyboard */; };
+		6C1A07A624A3607100712A91 /* Preloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A07A524A3607100712A91 /* Preloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6C1A079A24A35FA000712A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C1A079D24A35FA000712A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C1A079F24A35FA000712A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C1A07A524A3607100712A91 /* Preloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6C1A079124A35F9700712A91 /* AppDelegate.swift */,
 				6C1A079324A35F9700712A91 /* SceneDelegate.swift */,
 				6C1A079524A35F9700712A91 /* ViewController.swift */,
+				6C1A07A524A3607100712A91 /* Preloader.swift */,
 				6C1A079724A35F9700712A91 /* Main.storyboard */,
 				6C1A079A24A35FA000712A91 /* Assets.xcassets */,
 				6C1A079C24A35FA000712A91 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1A07A624A3607100712A91 /* Preloader.swift in Sources */,
 				6C1A079624A35F9700712A91 /* ViewController.swift in Sources */,
 				6C1A079224A35F9700712A91 /* AppDelegate.swift in Sources */,
 				6C1A079424A35F9700712A91 /* SceneDelegate.swift in Sources */,

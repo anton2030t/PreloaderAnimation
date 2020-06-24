@@ -10,11 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var preloader = Preloader()
+    let iziImage = UIImageView(image: UIImage(named: "izi"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        preloader = Preloader(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        preloader.center = view.center
+        view.addSubview(preloader)
+        preloader.startAnimating()
+        setupIzi()
     }
 
-
+    private func setupIzi() {
+        view.addSubview(iziImage)
+        iziImage.translatesAutoresizingMaskIntoConstraints = false
+        iziImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        iziImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        iziImage.heightAnchor.constraint(equalToConstant: 240).isActive = true
+        iziImage.widthAnchor.constraint(equalToConstant: 240).isActive = true
+    }
+    
 }
 
