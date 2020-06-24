@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     var preloader = Preloader()
-    
     let iziImage = UIImageView(image: UIImage(named: "izi"))
     
     override func viewDidLoad() {
@@ -26,7 +25,6 @@ class ViewController: UIViewController {
         preloader.center = view.center
         view.addSubview(preloader)
         preloader.startAnimating()
-
     }
 
     private func setupIzi() {
