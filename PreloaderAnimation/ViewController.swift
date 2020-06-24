@@ -10,11 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var line1 = Line1()
-    var line2 = Line2()
-    var line3 = Line3()
-    var line4 = Line4()
-    
+    var preloader = Preloader()
     let iziImage = UIImageView(image: UIImage(named: "izi"))
     
     override func viewDidLoad() {
@@ -25,25 +21,10 @@ class ViewController: UIViewController {
     }
     
     private func setupPreloader() {
-        line4 = Line4(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        line4.center = view.center
-        view.addSubview(line4)
-        line4.startAnimating()
-        
-        line3 = Line3(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        line3.center = view.center
-        view.addSubview(line3)
-        line3.startAnimating()
-        
-        line2 = Line2(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        line2.center = view.center
-        view.addSubview(line2)
-        line2.startAnimating()
-        
-        line1 = Line1(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        line1.center = view.center
-        view.addSubview(line1)
-        line1.startAnimating()
+        preloader = Preloader(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        preloader.center = view.center
+        view.addSubview(preloader)
+        preloader.startAnimating()
     }
 
     private func setupIzi() {
