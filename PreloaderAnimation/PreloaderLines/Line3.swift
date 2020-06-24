@@ -1,5 +1,5 @@
 //
-//  Preloader.swift
+//  Line3.swift
 //  PreloaderAnimation
 //
 //  Created by Anton Larchenko on 24.06.2020.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Preloader: UIView {
+class Line3: UIView {
     
     let MinStrokeLength: CGFloat = 0.05
-    let MaxStrokeLength: CGFloat = 0.8
+    let MaxStrokeLength: CGFloat = 0.7
     let circleShapeLayer = CAShapeLayer()
     
     override init(frame: CGRect) {
@@ -30,7 +30,7 @@ class Preloader: UIView {
                                     "transform" : NSNull(),
                                     "strokeColor" : NSNull()]
         circleShapeLayer.backgroundColor = UIColor.clear.cgColor
-        circleShapeLayer.strokeColor = UIColor.blue.cgColor
+        circleShapeLayer.strokeColor = UIColor(hex: 0x0787dc, alpha: 1).cgColor
         circleShapeLayer.fillColor = UIColor.clear.cgColor
         circleShapeLayer.lineWidth = 10
         circleShapeLayer.lineCap = CAShapeLayerLineCap.round
@@ -48,22 +48,9 @@ class Preloader: UIView {
     
     func startAnimating() {
         if layer.animation(forKey: "rotation") == nil {
-            startColorAnimation()
             startStrokeAnimation()
             startRotatingAnimation()
         }
-    }
-    
-    private func startColorAnimation() {
-        let color = CAKeyframeAnimation(keyPath: "strokeColor")
-        color.duration = 3.2
-        color.values = [UIColor(hex: 0x25ccc3, alpha: 1.0).cgColor,
-                          UIColor(hex: 0x8f27cc, alpha: 1.0).cgColor,
-                          UIColor(hex: 0xf7ce23, alpha: 1.0).cgColor,
-                          UIColor(hex: 0x0787dc, alpha: 1.0).cgColor]
-        color.calculationMode = CAAnimationCalculationMode.paced
-        color.repeatCount = Float.infinity
-        circleShapeLayer.add(color, forKey: "color")
     }
     
     private func startRotatingAnimation() {
@@ -121,18 +108,6 @@ class Preloader: UIView {
         layer.removeAllAnimations()
         circleShapeLayer.transform = CATransform3DIdentity
         layer.transform = CATransform3DIdentity
-    }
-    
-}
-
-extension UIColor {
-    convenience init(hex: UInt, alpha: CGFloat) {
-        self.init(
-            red: CGFloat((hex & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((hex & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(hex & 0x0000FF) / 255.0,
-            alpha: CGFloat(alpha)
-        )
     }
     
 }
